@@ -1,12 +1,13 @@
 #!/usr/bin/python
 
 from sys import argv
+from ioc import *
 
 filename = argv[1]
 
-f = open(filename, "r")
+ioc = IOC()
 
+ioc.importFile(filename)
 
-
-f.close()
+print(ioc.getPackage())
 

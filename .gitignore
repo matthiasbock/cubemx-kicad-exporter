@@ -1,4 +1,7 @@
 
+# Python generated
+*.pyc
+
 # CubeMX files
 *.ioc
 

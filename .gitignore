@@ -1,0 +1,8 @@
+
+# CubeMX files
+*.ioc
+
+# KiCad files
+*.pro
+*.sch
+

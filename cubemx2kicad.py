@@ -10,4 +10,4 @@ ioc = IOC()
 ioc.importFile(filename)
 
 print(ioc.getPackage())
-
+print(ioc.getPinCount())

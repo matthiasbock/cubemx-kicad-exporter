@@ -8,6 +8,7 @@ import re
 #
 class IOC:
     KEY_MCU_PACKAGE = "Mcu.Package"
+    PIN_COUNT_BY_PACKAGE = {"LQFP48": 48}
 
     def __init__(self):
         self.content = ""
@@ -47,3 +48,17 @@ class IOC:
         result = self.getValue(self.KEY_MCU_PACKAGE)
 
         return result
+
+    #
+    # Returns the pin count of the selected MCU package
+    #
+    def getPinCount(self):
+        package = self.getPackage()
+        if package == "":
+            return 0
+        
+        for key in self.PIN_COUNT_BY_PACKAGE.keys():
+            if key == package:
+                return self.PIN_COUNT_BY_PACKAGE[key]
+    
+        return 0
